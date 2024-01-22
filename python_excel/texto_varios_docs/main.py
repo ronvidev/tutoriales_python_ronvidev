@@ -1,7 +1,8 @@
 import os
 import win32com.client
 
-folder_path = r"F:\test"
+py_path = os.path.dirname(os.path.realpath(__file__))
+folder_path = os.path.join(py_path ,"docs")
 
 for name_doc in os.listdir(folder_path):
     excel = win32com.client.Dispatch("Excel.Application")
@@ -20,6 +21,6 @@ for name_doc in os.listdir(folder_path):
     
     worksheet.Cells(3,2).Value = "donde seas feliz :)"
     
-    workbook.Save()
+    # workbook.Save()
     
-    workbook.Close()
+    # workbook.Close()

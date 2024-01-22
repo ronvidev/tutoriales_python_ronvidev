@@ -1,13 +1,13 @@
 import os
-import sys
 import win32com.client
 
 #################################################################
 # OBTENER LOS ARGUMENTOS DE FLUTTER
 #################################################################
-print(os.getcwd())
-excelPath = os.path.join(os.getcwd(),'doc.xlsx')
-photosPath = '/fotos'
+
+py_path = os.path.dirname(os.path.realpath(__file__))
+excelPath = os.path.join(py_path, 'doc.xlsx')
+photosPath = os.path.join(py_path, 'fotos')
 
 #################################################################
 # INICIALIZAR EXCEL Y ABRIR DOCUMENTO
