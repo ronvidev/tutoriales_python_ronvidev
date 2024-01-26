@@ -2,10 +2,10 @@ import os
 import win32com.client
 
 #################################################################
-# OBTENER LOS ARGUMENTOS DE FLUTTER
+# OBTENER LAS RUTAS
 #################################################################
 
-py_path = os.path.dirname(os.path.realpath(__file__))
+py_path = os.path.dirname(__file__)
 excelPath = os.path.join(py_path, 'doc.xlsx')
 photosPath = os.path.join(py_path, 'fotos')
 
@@ -57,8 +57,8 @@ for name, cell in photo_cells.items():
 # GUARDAR Y CERRAR EXCEL
 #################################################################
 
-# workbook.Save()
-# workbook.Close()
+workbook.Save()
+workbook.Close()
 
 #################################################################
 # DEVOLVER MENSAJE DE CONCLUSIÓN A FLUTTER
