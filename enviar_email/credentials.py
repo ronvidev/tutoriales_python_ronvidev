@@ -1,0 +1,3 @@
+USER_MAIL = ""
+PASSWORD = ""
+CCO_EMAILS = []
