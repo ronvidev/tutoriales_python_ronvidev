@@ -5,6 +5,7 @@ from email.mime.image import MIMEImage
 import pandas as pd
 from credentials import *
 
+CCO_EMAILS = []
 
 def send_email(destinatarios, usuario, asunto, mensaje):
     with smtplib.SMTP('smtp.gmail.com', 587) as server:
@@ -26,6 +27,7 @@ def send_email(destinatarios, usuario, asunto, mensaje):
         server.sendmail(USER_MAIL, destinatarios + CCO_EMAILS, msg.as_string())
 
 if __name__ == '__main__':
+    # Crear un csv con encabezados [nombre, email, deuda]
     df = pd.read_csv('info.csv', delimiter=';')
     for indice, fila in df.iterrows():
         nombre = fila.loc['nombre']
